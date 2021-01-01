@@ -1,0 +1,33 @@
+.footer{
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    height: 100px;
+    width: 100%;
+    background-color: #b0b0b0;
+}
+.header{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 90px;
+    width: 100%;
+    background-color: #b0b0b0;
+}
+.sidebar{
+    position: fixed;
+    top: 90px;
+    left: 0px;
+    height: calc(100vh - 190px);
+    width: 200px;
+    background-color: #d0d0d0;
+}
+.center{
+    position: absolute;
+    top: 90px;
+    left: calc(200px + ((100vw - 200px) / 2));
+    transform: translateX(-50%);
+}
+body{
+    background-color: #fafafa;
+}
