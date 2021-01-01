@@ -1,14 +1,15 @@
 <?php
     $servername = "localhost";
     $username = "root";
-    $password = "";
-    $conn = new mysqli($servername, $username, $password);
+    $pass = "";
+    $dbname= "lab6";
+    $conn = new mysqli($servername, $username, $pass, $dbname);
 
     // Check connection
     if ($conn->connect_error) {
       die("Connection failed: " . $conn->connect_error);
     }
-    else {
-        echo "Connected successfully";
-    }
+    // function execute_query($sql){
+    //   return $conn->query($sql);
+    // }
 ?>
