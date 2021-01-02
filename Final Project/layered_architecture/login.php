@@ -36,23 +36,20 @@
     function user_verified($user_name, $password){
         $servername = "localhost";
         $username = "root";
-        $pw = "";
-        $dbname= "hospital_management";
-        $conn = new mysqli($servername, $username, $pw, $dbname);
+        $pass = "";
+        $dbname= "lab6";
+        $conn = new mysqli($servername, $username, $pass, $dbname);
 
         // Check connection
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
         }
-        echo "connected";
         $sql = "select * from users where user_name = '".$user_name."' AND password = '".$password."'";
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
-            echo "true";
             return true;
         } else {
-            echo "false";
             return false;
         }
         $conn->close();
